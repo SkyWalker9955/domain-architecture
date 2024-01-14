@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Marketplace.Domain
+build_property.ProjectDir = /home/mike/Documents/DDD_Code/Hands-on DDD/domain-architecture/Marketplace/Marketplace.Domain/
