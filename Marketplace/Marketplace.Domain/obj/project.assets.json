@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETStandard,Version=v2.1": {}
+    ".NETStandard,Version=v2.1": {
+      "Marketplace.Framework/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Marketplace.Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Marketplace.Framework.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Marketplace.Framework/1.0.0": {
+      "type": "project",
+      "path": "../Marketplace.Framework/Marketplace.Framework.csproj",
+      "msbuildProject": "../Marketplace.Framework/Marketplace.Framework.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETStandard,Version=v2.1": []
+    ".NETStandard,Version=v2.1": [
+      "Marketplace.Framework >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/home/mike/.nuget/packages/": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/mike/Documents/DDD_Code/Hands-on DDD/domain-architecture/Marketplace/Marketplace.Framework/Marketplace.Framework.csproj": {
+              "projectPath": "/home/mike/Documents/DDD_Code/Hands-on DDD/domain-architecture/Marketplace/Marketplace.Framework/Marketplace.Framework.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

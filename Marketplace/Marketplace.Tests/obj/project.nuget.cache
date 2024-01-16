@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "35adovkh57F6gIbc7OJGuFbpANgrk2nKPA1qcYL9TS/AhKYv5gyzJFpg4Ofpx78rjgPYL9I9nlIdIbSWogexHw==",
+  "dgSpecHash": "QLE7QIk+rSjy+NBgyYTk011l07s1++r/t9aFM8xrvhVxnXsgaD/x7sPQdnOgV6k8Q67/sRVugXh/GpqvUhQGng==",
   "success": true,
   "projectFilePath": "/home/mike/Documents/DDD_Code/Hands-on DDD/domain-architecture/Marketplace/Marketplace.Tests/Marketplace.Tests.csproj",
   "expectedPackageFiles": [
