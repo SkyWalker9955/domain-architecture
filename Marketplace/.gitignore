@@ -21,6 +21,16 @@ obj/
 .idea/**/dictionaries
 .idea/**/shelf
 
+# build folders
+Marketplace/obj/
+Marketplace/bin/
+Marketplace.Domain/obj/
+Marketplace.Domain/bin/
+Marketplace.Framework/obj/
+Marketplace.Framework/bin/
+Marketplace.Tests/obj/
+Marketplace.Tests/bin/
+
 # AWS User-specific
 .idea/**/aws.xml
 
