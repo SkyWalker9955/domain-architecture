@@ -7,7 +7,12 @@ namespace Marketplace.Domain
     public class ClassifiedAdTitle : Value<ClassifiedAdTitle>
     {
         #region factories
-        public static ClassifiedAdTitle FromString(string title) => new ClassifiedAdTitle(title);
+
+        public static ClassifiedAdTitle FromString(string title)
+        {
+            CheckValidity(title);
+            return new ClassifiedAdTitle(title);
+        }
 
         public static ClassifiedAdTitle FromHtml(string htmlTitle)
         {
@@ -17,16 +22,20 @@ namespace Marketplace.Domain
                 .Replace("<b>", "**")
                 .Replace("</b>", "**");
 
-            return new ClassifiedAdTitle(
+            var value = new ClassifiedAdTitle(
                 Regex.Replace(
                     supportedTagsReplaced, 
                     "<.*?>", 
                     string.Empty));
+            CheckValidity(value);
+            return new ClassifiedAdTitle(value);
         }
         #endregion
         
-        private readonly string _value;
-        private ClassifiedAdTitle(string value)
+        public string Value { get; }
+        internal ClassifiedAdTitle(string value) => Value = value;
+
+        private static void CheckValidity(string value)
         {
             if (value.Length > 100)
             {
@@ -34,8 +43,8 @@ namespace Marketplace.Domain
                     nameof(value), 
                     "Title cannot be longer than 100 characters");
             }
-
-            _value = value;
         }
+
+        public static implicit operator string(ClassifiedAdTitle self) => self.Value;
     }
 }
