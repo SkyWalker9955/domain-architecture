@@ -4,7 +4,7 @@ using Marketplace.Framework;
 
 namespace Marketplace.Domain
 {
-    public class ClassifiedAd : Entity
+    public class ClassifiedAd : Entity<ClassifiedAdId>
     {
         public ClassifiedAdId Id { get; private set; }
         public UserId OwnerId { get; private set; }
